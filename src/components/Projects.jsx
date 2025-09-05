@@ -84,16 +84,16 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="pt-32 pb-20 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4 transition-colors duration-300">
               Dự án của tôi
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
               Khám phá các dự án tôi đã thực hiện, từ ứng dụng web đến hệ thống backend phức tạp
             </p>
           </div>
@@ -107,7 +107,7 @@ const Projects = () => {
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                   activeFilter === filter.key
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {filter.label}
@@ -117,23 +117,23 @@ const Projects = () => {
 
           {/* Featured Projects */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center transition-colors duration-300">
               Dự án nổi bật
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {projects.filter(p => p.featured).map((project) => (
                 <div key={project.id} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 h-80 flex flex-col justify-center items-center">
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-8 h-80 flex flex-col justify-center items-center transition-colors duration-300">
                     <div className="text-8xl mb-6">{project.image}</div>
-                    <h4 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+                    <h4 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center transition-colors duration-300">
                       {project.title}
                     </h4>
-                    <p className="text-gray-600 text-center mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 text-center mb-6 transition-colors duration-300">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap justify-center gap-2 mb-6">
                       {project.technologies.map((tech, index) => (
-                        <span key={index} className="px-3 py-1 bg-white rounded-full text-sm font-medium text-gray-700 shadow-sm">
+                        <span key={index} className="px-3 py-1 bg-white dark:bg-gray-800 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 shadow-sm transition-colors duration-300">
                           {tech}
                         </span>
                       ))}
@@ -142,7 +142,7 @@ const Projects = () => {
                       <a href={project.liveUrl} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                         Xem demo
                       </a>
-                      <a href={project.githubUrl} className="px-6 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors">
+                      <a href={project.githubUrl} className="px-6 py-2 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                         Code
                       </a>
                     </div>
@@ -155,23 +155,23 @@ const Projects = () => {
           {/* All Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.filter(p => !p.featured).map((project) => (
-              <div key={project.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-6 h-64 flex flex-col justify-center items-center">
+              <div key={project.id} className="group bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 p-6 h-64 flex flex-col justify-center items-center transition-colors duration-300">
                   <div className="text-6xl mb-4">{project.image}</div>
-                  <h4 className="text-xl font-bold text-gray-800 mb-3 text-center">
+                  <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-3 text-center transition-colors duration-300">
                     {project.title}
                   </h4>
-                  <p className="text-gray-600 text-center text-sm mb-4">
+                  <p className="text-gray-600 dark:text-gray-300 text-center text-sm mb-4 transition-colors duration-300">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap justify-center gap-1 mb-4">
                     {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span key={index} className="px-2 py-1 bg-white rounded text-xs font-medium text-gray-700 shadow-sm">
+                      <span key={index} className="px-2 py-1 bg-white dark:bg-gray-800 rounded text-xs font-medium text-gray-700 dark:text-gray-300 shadow-sm transition-colors duration-300">
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-white rounded text-xs font-medium text-gray-700 shadow-sm">
+                      <span className="px-2 py-1 bg-white dark:bg-gray-800 rounded text-xs font-medium text-gray-700 dark:text-gray-300 shadow-sm transition-colors duration-300">
                         +{project.technologies.length - 3}
                       </span>
                     )}
@@ -180,7 +180,7 @@ const Projects = () => {
                     <a href={project.liveUrl} className="px-4 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700 transition-colors">
                       Demo
                     </a>
-                    <a href={project.githubUrl} className="px-4 py-1 border border-gray-300 text-gray-700 rounded text-sm hover:bg-gray-50 transition-colors">
+                    <a href={project.githubUrl} className="px-4 py-1 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded text-sm hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                       Code
                     </a>
                   </div>
@@ -191,11 +191,11 @@ const Projects = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-16">
-            <p className="text-lg text-gray-600 mb-6">
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
               Bạn có muốn xem thêm dự án của tôi không?
             </p>
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/buibaoduytan" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"

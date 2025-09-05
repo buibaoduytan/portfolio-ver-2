@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+/* CSS Variables for dark theme */
+:root {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
 /* Custom styles */
 body {
   margin: 0;
@@ -9,6 +19,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  background-color: #111827;
+  color: #f9fafb;
 }
 
 * {
@@ -20,20 +32,25 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset for fixed header */
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #1f2937;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   border-radius: 5px;
-  border: 2px solid #f8fafc;
+  border: 2px solid #1f2937;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -163,15 +180,13 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Custom focus styles */
 .focus-ring:focus {
   outline: none;
-  ring: 2px;
-  ring-color: #3b82f6;
-  ring-offset: 2px;
+  box-shadow: 0 0 0 2px #3b82f6;
 }
 
 /* Loading animation */
