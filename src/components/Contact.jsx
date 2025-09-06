@@ -32,19 +32,19 @@ const Contact = () => {
     {
       icon: "📧",
       title: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      value: "alabatrap52@gmail.com",
+      link: "mailto:alabatrap52@gmail.com"
     },
     {
       icon: "📱",
       title: "Phone",
-      value: "+84 123 456 789",
-      link: "tel:+84123456789"
+      value: "+84 846 844 038",
+      link: "tel:+84846844038"
     },
     {
       icon: "📍",
       title: "Location",
-      value: "Hà Nội, Việt Nam",
+      value: "Đồng Tháp, Việt Nam",
       link: "#"
     },
     {
