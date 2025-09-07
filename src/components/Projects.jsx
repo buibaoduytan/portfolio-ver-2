@@ -84,7 +84,7 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="pt-32 pb-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="projects" className="pt-32 pb-20 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}

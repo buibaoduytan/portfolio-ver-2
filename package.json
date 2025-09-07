@@ -10,6 +10,11 @@
     "preview": "vite preview --config ./config/vite.config.js"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.15.2",
+    "framer-motion": "^12.23.12",
+    "gsap": "^3.13.0",
+    "mathjs": "^14.7.0",
+    "motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

@@ -19,7 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  background-color: #111827;
   color: #f9fafb;
 }
 
@@ -118,6 +117,24 @@ section[id] {
   background: linear-gradient(135deg, #db2777, #be185d);
 }
 */
+
+/* Splash Cursor behind background but visible */
+canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1 !important;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Ensure all content is above cursor */
+.App > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* Animation classes */
 @keyframes fadeInUp {
